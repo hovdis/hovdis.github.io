@@ -10,16 +10,15 @@ import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 const App = () => {
-  <h1>test testersen</h1>;
-  /*   const router = createBrowserRouter(
+  const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
-    ) 
+    )
   );
-  return <RouterProvider router={router} />;*/
+  return <RouterProvider router={router} />;
 };
 
 export default App;
