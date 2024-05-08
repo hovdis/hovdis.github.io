@@ -1,8 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
+import MainLayout from "./layouts/MainLayout";
+import NotFoundPage from "./pages/NotFoundPage";
+import "./App.css";
 
+const App = () => {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<MainLayout />}>
+        {/* <Route index element={<HomePage />} /> */}
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    )
+  );
+  return <RouterProvider router={router} />;
+};
+/* 
 function App() {
   const [count, setCount] = useState(0)
 
@@ -30,6 +48,6 @@ function App() {
       </p>
     </>
   )
-}
+} */
 
-export default App
+export default App;
