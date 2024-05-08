@@ -6,6 +6,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
+import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
 import "./App.css";
 
